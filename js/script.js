@@ -1,3 +1,5 @@
+console.log('JS loaded!');
+
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 const cartBtn = document.querySelector('.cart-btn');
 const cartCount = document.getElementById('cart-count');
@@ -7,6 +9,7 @@ const cartModal = document.getElementById('cart-modal');
 // Add to Cart
 document.querySelectorAll('.add-to-cart').forEach(btn => {
   btn.addEventListener('click', () => {
+    console.log('Add to Cart clicked!');
     const id = btn.dataset.id;
     const name = btn.dataset.name;
     const price = parseInt(btn.dataset.price);
