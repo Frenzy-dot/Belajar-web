@@ -66,6 +66,15 @@
       color: var(--gray);
     }
 
+    footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
     @media (max-width: 768px) {
       nav ul {display: none;}
       .hero h1 {font-size: 2.5rem;}
@@ -102,4 +111,9 @@
   width: 300px;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
   z-index: 1000;
+}
+
+.logo img {
+  margin-right: 10px;
+  vertical-align: middle;
 }
