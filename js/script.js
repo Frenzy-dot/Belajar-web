@@ -1,26 +1,39 @@
-let cart = parseInt(localStorage.getItem('cart')) || 0;
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
 const cartBtn = document.querySelector('.cart-btn');
-const buyBtns = document.querySelectorAll('.buy-btn');
+const cartCount = document.getElementById('cart-count');
+const cartItems = document.getElementById('cart-items');
+const cartModal = document.getElementById('cart-modal');
 
 function updateCart() {
-  cartBtn.textContent = `Cart (${cart})`;
-  localStorage.setItem('cart', cart);
+  cartCount.textContent = cart.length;
+  localStorage.setItem('cart', JSON.stringify(cart));
+  renderCart();
 }
 
-buyBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    cart++;
-    updateCart();
-    btn.textContent = 'Added ✓';
-    btn.style.background = 'var(--accent)';
-    btn.style.color = '#000';
-    setTimeout(() => {
-      btn.textContent = '+ Add to Cart';
-      btn.style.background = '#222';
-      btn.style.color = 'var(--text)';
-    }, 1500);
+function renderCart() {
+  cartItems.innerHTML = '';
+  cart.forEach((item, index) => {
+    cartItems.innerHTML += `
+      <div>
+        ${item.name} - $${item.price}
+        <button onclick="removeItem(${index})">Remove</button>
+      </div>
+    `;
   });
-});
+}
+
+function showCart() {
+  cartModal.style.display = 'block';
+}
+
+function closeCart() {
+  cartModal.style.display = 'none';
+}
+
+function removeItem(index) {
+  cart.splice(index, 1);
+  updateCart();
+}
 
 // Init
 updateCart();
