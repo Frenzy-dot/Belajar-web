@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cartItemsEl.innerHTML = '';
 
     if (cart.length === 0) {
-      cartItemsEl.innerHTML = '<p>Cart masih kosong 🛒</p>';
+      cartItemsEl.innerHTML = '<p>Cart still empty 🛒</p>';
       return;
     }
 
@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (cart.length === 0) return;
     const total = cart.reduce((sum, item) => sum + item.price, 0);
     // Placeholder — ganti dengan redirect ke Gumroad/Stripe nanti
-    alert(`Total: $${total}\n\nFitur checkout akan segera hadir! Hubungi @gloo.std di Instagram untuk order sekarang.`);
+    alert(`Total: $${total}\n\nCheckout feature coming soon! Contact @gloo.std on Instagram to order now.`);
   };
 
   // ─── Init ───
