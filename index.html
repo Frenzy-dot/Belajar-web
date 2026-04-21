@@ -2,11 +2,10 @@
 <html lang="id">
 <head>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>gloo.std | Designer</title>
-
 </head>
 <body>
   <div class="container">
@@ -17,15 +16,14 @@
         <li><a href="#produk">Produk</a></li>
         <li><a href="#">Lookbook</a></li>
       </ul>
-      <button class="cart-btn">
-       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .5.5v1l.5 3a.5.5 0 0 1-.5.5H1a.5.5 0 0 1-.5-.5v-1H.5A.5.5 0 0 1 0 1.5zM11 2.5V2H4.5l.5 3h7l.5-3H11z"/>
-    <path d="M3.5 11a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1z"/>
-  </svg>
+      <button class="cart-btn" onclick="showCart()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .5.5v1l.5 3a.5.5 0 0 1-.5.5H1a.5.5 0 0 1-.5-.5v-1H.5A.5.5 0 0 1 0 1.5zM11 2.5V2H4.5l.5 3h7l.5-3H11z"/>
+          <path d="M3.5 11a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1z"/>
+        </svg>
         Cart (<span id="cart-count">0</span>)
       </button>
     </nav>
-
     <section class="hero">
       <h1>DEFINE YOUR <span>STYLE</span></h1>
       <p>Clothing Designer</p>
@@ -33,7 +31,6 @@
       <p>- Comission OPEN</p>
       <a href="#produk" class="btn">Belanja Sekarang</a>
     </section>
-
     <section class="products" id="produk">
       <h2>New Drops</h2>
       <div class="grid">
@@ -42,7 +39,7 @@
           <div class="card-body">
             <h3>Design For Sale!!!</h3>
             <p class="price">$70</p>
-            <button class="buy-btn add-to-cart"data-id="1" data-name="full-set-design" data-price="70">+ Add to Cart</button>
+            <button class="buy-btn add-to-cart" data-id="1" data-name="full-set-design" data-price="70">+ Add to Cart</button>
           </div>
         </div>
         <div class="card">
@@ -50,7 +47,7 @@
           <div class="card-body">
             <h3>Design For Sale!!!</h3>
             <p class="price">$55</p>
-            <button class="buy-btn add-to-cart"data-id="2" data-name="hoodie-design-1" data-price="55">+ Add to Cart</button>
+            <button class="buy-btn add-to-cart" data-id="2" data-name="hoodie-design-1" data-price="55">+ Add to Cart</button>
           </div>
         </div>
         <div class="card">
@@ -58,23 +55,20 @@
           <div class="card-body">
             <h3>Design For Sale!!!</h3>
             <p class="price">$50</p>
-            <button class="buy-btn add-to-cart"data-id="3" data-name="hoodie-design-2" data-price="50">+ Add to Cart</button>
+            <button class="buy-btn add-to-cart" data-id="3" data-name="hoodie-design-2" data-price="50">+ Add to Cart</button>
           </div>
         </div>
       </div>
     </section>
   </div>
-
   <div id="cart-modal" class="modal">
-  <h2>Your Cart</h2>
-  <div id="cart-items"></div>
-  <button onclick="closeCart()">Close</button>
-
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <button onclick="closeCart()">Close</button>
+  </div>
   <footer>
     <p>© 2026 gloo.std. All rights reserved. Made in Banten.</p>
   </footer>
-
   <script src="js/script.js" defer></script>
-
 </body>
 </html>
