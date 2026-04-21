@@ -75,7 +75,17 @@
   display: flex;
   align-items: center;
   gap: 8px;
-    }
-.cart-btn svg {
-  margin-right: 8px;
+  background: #222;
+  color: var(--text);
+  border: 1px solid var(--accent);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cart-btn:hover {
+  background: var(--accent);
+  color: #000;
 }
