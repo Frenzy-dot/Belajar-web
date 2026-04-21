@@ -4,6 +4,19 @@ const cartCount = document.getElementById('cart-count');
 const cartItems = document.getElementById('cart-items');
 const cartModal = document.getElementById('cart-modal');
 
+// Add to Cart
+document.querySelectorAll('.add-to-cart').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const id = btn.dataset.id;
+    const name = btn.dataset.name;
+    const price = parseInt(btn.dataset.price);
+
+    const item = { id, name, price };
+    cart.push(item);
+    updateCart();
+  });
+});
+
 function updateCart() {
   cartCount.textContent = cart.length;
   localStorage.setItem('cart', JSON.stringify(cart));
