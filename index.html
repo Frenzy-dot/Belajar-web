@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,10 +17,10 @@
   <meta property="og:image" content="Barang/full-set-design.jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:url" content="https://frenzy-dot.github.io/Belajar-web/#produk">
+  <meta property="og:url" content="https://gloo-std.com">
   <meta property="og:site_name" content="gloo.std">
 
-  <!-- ─── Twitter Card (Instagram link preview) ─── -->
+  <!-- ─── Twitter Card ─── -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="gloo.std | Define Your Style">
   <meta name="twitter:description" content="Clothing designer from Banten. Artwork & graphic for sale — commission OPEN.">
@@ -50,8 +50,8 @@
     <button class="mobile-menu-close" onclick="closeMobileMenu()">✕</button>
     <ul>
       <li><a href="#" onclick="closeMobileMenu()">Home</a></li>
-      <li><a href="#produk" onclick="closeMobileMenu()">Produk</a></li>
-      <li><a href="#" onclick="closeMobileMenu()">Lookbook</a></li>
+      <li><a href="#products" onclick="closeMobileMenu()">Products</a></li>
+      <li><a href="#lookbook" onclick="closeMobileMenu()">Lookbook</a></li>
     </ul>
   </div>
   <div id="mobile-menu-overlay" class="mobile-menu-overlay" onclick="closeMobileMenu()"></div>
@@ -66,8 +66,8 @@
       <!-- Desktop nav -->
       <ul class="nav-links">
         <li><a href="#">Home</a></li>
-        <li><a href="#produk">Produk</a></li>
-        <li><a href="#">Lookbook</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#lookbook">Lookbook</a></li>
       </ul>
 
       <div class="nav-right">
@@ -92,45 +92,45 @@
     <section class="hero fade-in-up">
       <h1>DEFINE YOUR <span>STYLE</span></h1>
       <p>Clothing Designer</p>
-      <p>- Art work/Graphic for sale</p>
-      <p>- Comission OPEN</p>
-      <a href="#produk" class="btn">Shop Now</a>
+      <p>— Artwork & Graphics for Sale</p>
+      <p>— Commission OPEN</p>
+      <a href="#products" class="btn">Shop Now</a>
     </section>
 
-    <section class="products" id="produk">
+    <section class="products" id="products">
       <h2 class="fade-in-up" style="animation-delay:0.1s">New Drops</h2>
       <div class="grid">
         <div class="card fade-in-up" style="animation-delay:0.15s">
           <div class="card-img-wrap" onclick="openLightbox('Barang/full-set-design.jpeg', 'Full Set Design')">
-            <img src="Barang/full-set-design.jpeg" alt="Full Set">
+            <img src="Barang/full-set-design.jpeg" alt="Full Set Design">
             <div class="zoom-overlay"><i class="fas fa-search-plus"></i></div>
           </div>
           <div class="card-body">
-            <h3>Design For Sale!!!</h3>
+            <h3>Full Set Bundle</h3>
             <p class="price">$70</p>
-            <button class="buy-btn add-to-cart" data-id="1" data-name="full-set-design" data-price="70">+ Add to Cart</button>
+            <button class="buy-btn add-to-cart" data-id="1" data-name="Full Set Bundle" data-price="70">+ Add to Cart</button>
           </div>
         </div>
         <div class="card fade-in-up" style="animation-delay:0.25s">
-          <div class="card-img-wrap" onclick="openLightbox('Barang/hoodie-design-1.jpeg', 'Hoodie Design 1')">
-            <img src="Barang/hoodie-design-1.jpeg" alt="Hoodie">
+          <div class="card-img-wrap" onclick="openLightbox('Barang/hoodie-design-1.jpeg', 'Hoodie Graphic Vol.1')">
+            <img src="Barang/hoodie-design-1.jpeg" alt="Hoodie Graphic Vol.1">
             <div class="zoom-overlay"><i class="fas fa-search-plus"></i></div>
           </div>
           <div class="card-body">
-            <h3>Design For Sale!!!</h3>
+            <h3>Hoodie Graphic Vol.1</h3>
             <p class="price">$55</p>
-            <button class="buy-btn add-to-cart" data-id="2" data-name="hoodie-design-1" data-price="55">+ Add to Cart</button>
+            <button class="buy-btn add-to-cart" data-id="2" data-name="Hoodie Graphic Vol.1" data-price="55">+ Add to Cart</button>
           </div>
         </div>
         <div class="card fade-in-up" style="animation-delay:0.35s">
-          <div class="card-img-wrap" onclick="openLightbox('Barang/hoodie-design-2.jpeg', 'Hoodie Design 2')">
-            <img src="Barang/hoodie-design-2.jpeg" alt="Hoodie">
+          <div class="card-img-wrap" onclick="openLightbox('Barang/hoodie-design-2.jpeg', 'Hoodie Graphic Vol.2')">
+            <img src="Barang/hoodie-design-2.jpeg" alt="Hoodie Graphic Vol.2">
             <div class="zoom-overlay"><i class="fas fa-search-plus"></i></div>
           </div>
           <div class="card-body">
-            <h3>Design For Sale!!!</h3>
+            <h3>Hoodie Graphic Vol.2</h3>
             <p class="price">$50</p>
-            <button class="buy-btn add-to-cart" data-id="3" data-name="hoodie-design-2" data-price="50">+ Add to Cart</button>
+            <button class="buy-btn add-to-cart" data-id="3" data-name="Hoodie Graphic Vol.2" data-price="50">+ Add to Cart</button>
           </div>
         </div>
       </div>
@@ -154,9 +154,69 @@
     </div>
   </div>
 
+  <!-- ─── Lookbook Section ─── -->
+  <section class="lookbook" id="lookbook">
+    <div class="container">
+
+      <div class="lookbook-header reveal">
+        <p class="lookbook-label">// visual archive</p>
+        <h2>Lookbook</h2>
+        <p class="lookbook-sub">Past drops, experiments &amp; the aesthetic behind gloo.std.</p>
+      </div>
+
+      <!-- Masonry-style grid using 3 columns -->
+      <div class="lookbook-grid">
+
+        <!-- Col 1 -->
+        <div class="lb-col">
+          <div class="lb-item reveal" style="transition-delay:0.05s"
+               onclick="openLightbox('Barang/full-set-design.jpeg','Full Set Bundle — gloo.std')">
+            <img src="Barang/full-set-design.jpeg" alt="Full Set Bundle">
+            <div class="lb-caption">
+              <span class="lb-tag">DROP 001</span>
+              <span class="lb-name">Full Set Bundle</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 2 -->
+        <div class="lb-col">
+          <div class="lb-item reveal" style="transition-delay:0.15s"
+               onclick="openLightbox('Barang/hoodie-design-1.jpeg','Hoodie Graphic Vol.1 — gloo.std')">
+            <img src="Barang/hoodie-design-1.jpeg" alt="Hoodie Graphic Vol.1">
+            <div class="lb-caption">
+              <span class="lb-tag">DROP 002</span>
+              <span class="lb-name">Hoodie Graphic Vol.1</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 3 -->
+        <div class="lb-col">
+          <div class="lb-item reveal" style="transition-delay:0.25s"
+               onclick="openLightbox('Barang/hoodie-design-2.jpeg','Hoodie Graphic Vol.2 — gloo.std')">
+            <img src="Barang/hoodie-design-2.jpeg" alt="Hoodie Graphic Vol.2">
+            <div class="lb-caption">
+              <span class="lb-tag">DROP 003</span>
+              <span class="lb-name">Hoodie Graphic Vol.2</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end lookbook-grid -->
+
+      <!-- Commission CTA -->
+      <div class="lookbook-cta reveal">
+        <p>Want something custom?</p>
+        <a href="https://instagram.com/gloo.std" target="_blank" class="btn">Commission Open — DM Us</a>
+      </div>
+
+    </div>
+  </section>
+
   <footer>
     <p>© 2026 gloo.std. All rights reserved. Made in Banten.</p>
-    <p>Contact: <a href="https://instagram.com/gloo.std" target="_blank">@gloo.std</a></p>
+    <p>Follow us: <a href="https://instagram.com/gloo.std" target="_blank">@gloo.std</a></p>
   </footer>
 
   <script src="js/script.js" defer></script>

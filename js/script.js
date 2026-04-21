@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cartItemsEl.innerHTML = '';
 
     if (cart.length === 0) {
-      cartItemsEl.innerHTML = '<p>Cart still empty 🛒</p>';
+      cartItemsEl.innerHTML = '<p>Your cart is empty 🛒</p>';
       return;
     }
 
@@ -126,8 +126,8 @@ document.addEventListener('DOMContentLoaded', () => {
   window.handleCheckout = function () {
     if (cart.length === 0) return;
     const total = cart.reduce((sum, item) => sum + item.price, 0);
-    // Placeholder — ganti dengan redirect ke Gumroad/Stripe nanti
-    alert(`Total: $${total}\n\nCheckout feature coming soon! Contact @gloo.std on Instagram to order now.`);
+    // Placeholder — replace with Gumroad/Stripe redirect later
+    alert(`Total: $${total}\n\nCheckout coming soon! DM us on Instagram @gloo.std to order now.`);
   };
 
   // ─── Init ───
