@@ -8,24 +8,59 @@
   <title>gloo.std | Designer</title>
 </head>
 <body>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">
+    <span id="toast-msg">✓ Added to cart</span>
+  </div>
+
+  <!-- Cart Overlay (backdrop) -->
+  <div id="cart-overlay" class="cart-overlay" onclick="closeCart()"></div>
+
+  <!-- Mobile Nav Menu -->
+  <div id="mobile-menu" class="mobile-menu">
+    <button class="mobile-menu-close" onclick="closeMobileMenu()">✕</button>
+    <ul>
+      <li><a href="#" onclick="closeMobileMenu()">Home</a></li>
+      <li><a href="#produk" onclick="closeMobileMenu()">Produk</a></li>
+      <li><a href="#" onclick="closeMobileMenu()">Lookbook</a></li>
+    </ul>
+  </div>
+  <div id="mobile-menu-overlay" class="mobile-menu-overlay" onclick="closeMobileMenu()"></div>
+
   <div class="container">
     <nav>
       <div class="logo">
-         <img src="Barang/logo.jpg" alt="gloo.std Logo" width="40" height="40">
-    <span>gloo<span>.std</span></span> </div>
-      <ul>
+        <img src="Barang/logo.jpg" alt="gloo.std Logo" width="40" height="40">
+        <span>gloo<span>.std</span></span>
+      </div>
+
+      <!-- Desktop nav -->
+      <ul class="nav-links">
         <li><a href="#">Home</a></li>
         <li><a href="#produk">Produk</a></li>
         <li><a href="#">Lookbook</a></li>
       </ul>
-      <button class="cart-btn" onclick="showCart()">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-          <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .5.5v1l.5 3a.5.5 0 0 1-.5.5H1a.5.5 0 0 1-.5-.5v-1H.5A.5.5 0 0 1 0 1.5zM11 2.5V2H4.5l.5 3h7l.5-3H11z"/>
-          <path d="M3.5 11a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1z"/>
-        </svg>
-        Cart (<span id="cart-count">0</span>)
-      </button>
+
+      <div class="nav-right">
+        <!-- Cart button -->
+        <button class="cart-btn" onclick="showCart()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .5.5v1l.5 3a.5.5 0 0 1-.5.5H1a.5.5 0 0 1-.5-.5v-1H.5A.5.5 0 0 1 0 1.5zM11 2.5V2H4.5l.5 3h7l.5-3H11z"/>
+            <path d="M3.5 11a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1z"/>
+          </svg>
+          Cart (<span id="cart-count">0</span>)
+        </button>
+
+        <!-- Hamburger button (mobile only) -->
+        <button class="hamburger-btn" onclick="openMobileMenu()" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </nav>
+
     <section class="hero">
       <h1>DEFINE YOUR <span>STYLE</span></h1>
       <p>Clothing Designer</p>
@@ -33,6 +68,7 @@
       <p>- Comission OPEN</p>
       <a href="#produk" class="btn">Belanja Sekarang</a>
     </section>
+
     <section class="products" id="produk">
       <h2>New Drops</h2>
       <div class="grid">
@@ -63,16 +99,29 @@
       </div>
     </section>
   </div>
+
+  <!-- Cart Modal (upgraded) -->
   <div id="cart-modal" class="modal">
-    <h2>Your Cart</h2>
+    <div class="modal-header">
+      <h2>Your Cart</h2>
+      <button class="modal-close-btn" onclick="closeCart()">✕</button>
+    </div>
     <div id="cart-items"></div>
-    <button onclick="closeCart()">Close</button>
+    <div class="cart-footer">
+      <div class="cart-total">
+        Total: <span id="cart-total-price">$0</span>
+      </div>
+      <button class="checkout-btn" id="checkout-btn" onclick="handleCheckout()">
+        Checkout →
+      </button>
+    </div>
   </div>
+
   <footer>
     <p>© 2026 gloo.std. All rights reserved. Made in Banten.</p>
     <p>Contact: <a href="https://instagram.com/gloo.std" target="_blank">@gloo.std</a></p>
-</footer>
   </footer>
+
   <script src="js/script.js" defer></script>
 </body>
 </html>
