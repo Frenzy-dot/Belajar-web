@@ -1,13 +1,41 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>gloo.std | Designer</title>
+  <title>gloo.std | Clothing Designer & Graphic Art</title>
+
+  <!-- ─── SEO Meta Tags ─── -->
+  <meta name="description" content="gloo.std — Clothing designer dari Banten. Artwork & graphic design for sale, commission open. Define your style.">
+  <meta name="keywords" content="gloo.std, clothing designer, graphic design, artwork, commission, streetwear, Banten">
+  <meta name="author" content="gloo.std">
+
+  <!-- ─── Open Graph (WhatsApp, Facebook, Discord) ─── -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="gloo.std | Define Your Style">
+  <meta property="og:description" content="Clothing designer dari Banten. Artwork & graphic for sale — commission OPEN.">
+  <meta property="og:image" content="Barang/full-set-design.jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://gloo-std.com">
+  <meta property="og:site_name" content="gloo.std">
+
+  <!-- ─── Twitter Card (Instagram link preview) ─── -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="gloo.std | Define Your Style">
+  <meta name="twitter:description" content="Clothing designer dari Banten. Artwork & graphic for sale — commission OPEN.">
+  <meta name="twitter:image" content="Barang/full-set-design.jpeg">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+
+  <!-- ─── Lightbox ─── -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+    <img id="lightbox-img" src="" alt="">
+  </div>
 
   <!-- Toast Notification -->
   <div id="toast" class="toast">
@@ -61,7 +89,7 @@
       </div>
     </nav>
 
-    <section class="hero">
+    <section class="hero fade-in-up">
       <h1>DEFINE YOUR <span>STYLE</span></h1>
       <p>Clothing Designer</p>
       <p>- Art work/Graphic for sale</p>
@@ -70,26 +98,35 @@
     </section>
 
     <section class="products" id="produk">
-      <h2>New Drops</h2>
+      <h2 class="fade-in-up" style="animation-delay:0.1s">New Drops</h2>
       <div class="grid">
-        <div class="card">
-          <img src="Barang/full-set-design.jpeg" alt="Full Set">
+        <div class="card fade-in-up" style="animation-delay:0.15s">
+          <div class="card-img-wrap" onclick="openLightbox('Barang/full-set-design.jpeg', 'Full Set Design')">
+            <img src="Barang/full-set-design.jpeg" alt="Full Set">
+            <div class="zoom-overlay"><i class="fas fa-search-plus"></i></div>
+          </div>
           <div class="card-body">
             <h3>Design For Sale!!!</h3>
             <p class="price">$70</p>
             <button class="buy-btn add-to-cart" data-id="1" data-name="full-set-design" data-price="70">+ Add to Cart</button>
           </div>
         </div>
-        <div class="card">
-          <img src="Barang/hoodie-design-1.jpeg" alt="Hoodie">
+        <div class="card fade-in-up" style="animation-delay:0.25s">
+          <div class="card-img-wrap" onclick="openLightbox('Barang/hoodie-design-1.jpeg', 'Hoodie Design 1')">
+            <img src="Barang/hoodie-design-1.jpeg" alt="Hoodie">
+            <div class="zoom-overlay"><i class="fas fa-search-plus"></i></div>
+          </div>
           <div class="card-body">
             <h3>Design For Sale!!!</h3>
             <p class="price">$55</p>
             <button class="buy-btn add-to-cart" data-id="2" data-name="hoodie-design-1" data-price="55">+ Add to Cart</button>
           </div>
         </div>
-        <div class="card">
-          <img src="Barang/hoodie-design-2.jpeg" alt="Hoodie">
+        <div class="card fade-in-up" style="animation-delay:0.35s">
+          <div class="card-img-wrap" onclick="openLightbox('Barang/hoodie-design-2.jpeg', 'Hoodie Design 2')">
+            <img src="Barang/hoodie-design-2.jpeg" alt="Hoodie">
+            <div class="zoom-overlay"><i class="fas fa-search-plus"></i></div>
+          </div>
           <div class="card-body">
             <h3>Design For Sale!!!</h3>
             <p class="price">$50</p>
