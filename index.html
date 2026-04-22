@@ -90,17 +90,28 @@
     </nav>
 
     <section class="hero fade-in-up">
-      <h1>DEFINE YOUR <span>STYLE</span></h1>
-      <p>Clothing Designer</p>
-      <p>Artwork & Graphics for Sale</p>
-      <p>Commission OPEN</p>
-      <a href="#products" class="btn">Shop Now</a>
+      <div class="hero-inner">
+        <p class="hero-label">Est. 2026 — Banten, ID</p>
+        <h1>DEFINE YOUR <em>STYLE</em></h1>
+        <div class="hero-desc">
+          <p>Clothing Designer</p>
+          <p>— Artwork &amp; Graphics for Sale</p>
+          <p>— Commission OPEN</p>
+        </div>
+        <div class="hero-actions">
+          <a href="#products" class="btn">Shop Now</a>
+          <a href="#lookbook" class="btn-ghost">View Lookbook</a>
+        </div>
+      </div>
     </section>
 
     <section class="products" id="products">
-      <h2 class="fade-in-up" style="animation-delay:0.1s">New Drops</h2>
+      <div class="section-header">
+        <h2 class="section-title fade-in-up" style="animation-delay:0.1s">New Drops</h2>
+        <span class="section-label">— 3 items available</span>
+      </div>
       <div class="grid">
-        <div class="card fade-in-up" style="animation-delay:0.15s">
+        <div class="card fade-in-up" data-num="001" style="animation-delay:0.15s">
           <div class="card-img-wrap" onclick="openLightbox('Barang/full-set-design.jpeg', 'Full Set Design')">
             <img src="Barang/full-set-design.jpeg" alt="Full Set Design">
             <div class="zoom-overlay"><i class="fas fa-search-plus"></i></div>
@@ -111,7 +122,7 @@
             <button class="buy-btn add-to-cart" data-id="1" data-name="Full Set Bundle" data-price="70">+ Add to Cart</button>
           </div>
         </div>
-        <div class="card fade-in-up" style="animation-delay:0.25s">
+        <div class="card fade-in-up" data-num="002" style="animation-delay:0.25s">
           <div class="card-img-wrap" onclick="openLightbox('Barang/hoodie-design-1.jpeg', 'Hoodie Graphic Vol.1')">
             <img src="Barang/hoodie-design-1.jpeg" alt="Hoodie Graphic Vol.1">
             <div class="zoom-overlay"><i class="fas fa-search-plus"></i></div>
@@ -122,7 +133,7 @@
             <button class="buy-btn add-to-cart" data-id="2" data-name="Hoodie Graphic Vol.1" data-price="55">+ Add to Cart</button>
           </div>
         </div>
-        <div class="card fade-in-up" style="animation-delay:0.35s">
+        <div class="card fade-in-up" data-num="003" style="animation-delay:0.35s">
           <div class="card-img-wrap" onclick="openLightbox('Barang/hoodie-design-2.jpeg', 'Hoodie Graphic Vol.2')">
             <img src="Barang/hoodie-design-2.jpeg" alt="Hoodie Graphic Vol.2">
             <div class="zoom-overlay"><i class="fas fa-search-plus"></i></div>
@@ -198,14 +209,14 @@
             <img src="Barang/full-set-preview-3.jpeg" alt="Full Set Graphic Vol.2">
             <div class="lb-caption">
               <span class="lb-tag">DROP 003</span>
-              <span class="lb-name">Full Set Graphic Vol.2</span>
+              <span class="lb-name">Hoodie Graphic Vol.2</span>
             </div>
           </div>
         </div>
 
-      </div>
+      </div><!-- end lookbook-grid -->
 
-    
+      <!-- Commission CTA -->
       <div class="lookbook-cta reveal">
         <p>Want something custom?</p>
         <a href="https://instagram.com/gloo.std" target="_blank" class="btn">Commission Open — DM Us</a>
