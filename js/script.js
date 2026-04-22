@@ -134,8 +134,9 @@ document.addEventListener('DOMContentLoaded', () => {
   updateCartUI();
 
   // ─── Scroll Reveal (IntersectionObserver) ───
-  const revealEls = document.querySelectorAll('.reveal');
-  if (revealEls.length > 0) {
+  function initReveal() {
+    const revealEls = document.querySelectorAll('.reveal');
+    if (revealEls.length === 0) return;
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -143,9 +144,13 @@ document.addEventListener('DOMContentLoaded', () => {
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12 });
+    }, {
+      threshold: 0,
+      rootMargin: '0px 0px -40px 0px'
+    });
     revealEls.forEach(el => observer.observe(el));
   }
+  initReveal();
 
   // ─── Lightbox ───
   const lightbox    = document.getElementById('lightbox');
